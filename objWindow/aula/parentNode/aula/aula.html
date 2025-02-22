@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> parentNode, remove, removeChild </title>
+</head>
+<body>
+    <script>
+        function inica(){
+           var elemento = document.getElementById("p1");
+          // alert(elemento.parentNode.nodeName); // pega o elemento pai ou seja se ele ta dentro de alguma coisa 
+           //elemento.remove(); // apaga o elemento no caso seria o p1
+        }
+        window.addEventListener("load",inica); // pra chamar logo a função iniciar
+    </script>
+
+        <div id="cfbCursos">
+            <p id="p1">Curso de Javascript </p>
+            <p id="p2">Curso de HTML/HTML5 </p>
+            <p id="p3">Curso de Css3 </p>
+            <p id="p4">Curso de PHP/MYSQL </p>
+            <p id="p5">Curso de C++ </p>
+            <p id="p6">Curso de Photoshop </p>
+            <p id="p7">Curso de Flash </p>
+            <p id="p8">Curso Unity</p>
+        </div>
+
+
+</body>
+</html>

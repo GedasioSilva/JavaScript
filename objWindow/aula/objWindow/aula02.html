@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Window - P2 (innerWidth, innerHeight, screenX, screenY)</title>
+</head>
+<script>
+    var l,a,px,py,painel;
+
+    
+
+    function info(){ 
+        l = window.innerWidth; // pega largura interna da Janela 
+        a = window.innerHeight; // pega a altura da pagina 
+        px = window.screenX; // pegar o posição da pagina contando com borda na tela
+        py = window.screenY; 
+        painel.innerHTML = "L" +l+"- A"+a+"<br>"+" X:"+px+"  Y"+py; // como vai estar escrito dentro da div
+    }
+    function rolar(){
+        window.scrollBy(500,500); // parametro de quanto vai rolar pra baixo e esquerda 
+    }
+
+    function inicia(){
+        document.getElementById("btam").addEventListener("click",info);
+        document.getElementById("btnPos").addEventListener("click",rolar); // a função rolar ou descer a pagina
+        painel = document.getElementById("painel");
+        
+    }
+
+    window.addEventListener("load",inicia);
+
+</script>
+<style>
+    #painel{
+        border: 1px solid black;
+        border-radius: 10px; /* as bordas ficarem redondas*/
+        padding: 15px;
+        width: 1500px;
+        height: 1500px;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <button id="btam" >Tamanho</button>
+    <button id="btnPos" >Rolar</button> <!-- FAZER A pagina rolar até em baixo -->
+    <div id="painel"></div>
+</body>
+</html>

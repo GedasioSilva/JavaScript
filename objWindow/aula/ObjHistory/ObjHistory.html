@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJ HISTORY</title>
+</head>
+<script>
+    // pegar o Historico de navegação Dentro Da Pagina
+    var painel,btnB,btnF,btnG; 
+    
+    function h1(num){
+        window.history.go(num);
+    }
+
+    function inicia(){
+        btnB = document.getElementById("btnBack");
+        btnF = document.getElementById("btnForward");
+        btnG = document.getElementById("btnback2");
+
+     
+        btnB.addEventListener("click",function(){
+            h1(-1);
+        });
+
+        btnF.addEventListener("click",function(){
+            h1(1);
+        });
+
+        btnG.addEventListener("click",function(){
+            h1(-2)
+        });
+
+        painel = document.getElementById("info");
+        painel.innerHTML=history.length;
+
+    }
+    window.addEventListener("load",inicia);
+</script>
+<body>
+    
+    
+    <h1> Home - Aula.67.html</h1>
+    <p id="info"></p>
+    
+    <a href="ObjHistory.html">Home</a>
+    <a href="p2.html">Pagina 2</a>
+    <a href="p3.html">Pagina 3</a> <br><hr>
+    <button id="btnBack">Voltar</button>
+    <button id="btnForward">Avanaçar</button>
+    <button id="btnback2">Voltar 2 </button> 
+
+    </body>
+    </html>

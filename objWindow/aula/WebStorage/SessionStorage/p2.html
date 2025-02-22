@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage</title>
+</head>
+<style>
+    body{
+        background-color: #800;
+        color: #fff;
+    }
+</style>
+<script>
+
+function inicia(){
+     document.getElementById("Painel").innerHTML=sessionStorage.nome;//session pega os dados da varieal e coloca no id painel 
+    }
+
+    window.addEventListener("load",inicia);
+
+
+</script>
+
+<body>
+
+    <h2>Pagina 2 </h2>
+    <div id="Painel"></div>
+
+</body>
+</html>

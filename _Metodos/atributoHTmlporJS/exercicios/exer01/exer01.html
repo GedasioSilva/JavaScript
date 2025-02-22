@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos HTML POR JS </title>
+</head>
+<style>
+    #corpo{
+        width: 600px;
+        height: 600px;
+        border: 1px solid rgb(202, 205, 209);
+    }
+</style>
+<script>
+    function mudaCor(p){
+        obj = document.getElementById("corpo"); // Pegando o Id 
+        if(p == 1){
+            obj.style.backgroundColor = "red";
+        }if( p == 2){
+            obj.style.backgroundColor = "green";
+        } else if(p == 3){
+            obj.style.backgroundColor = "blue";
+        }
+    }
+
+    function tiraCor(){
+        ob = document.getElementById("corpo");
+        ob.style.backgroundColor = "white";
+    }
+</script>
+<body>
+    <div id="corpo">
+
+    </div>
+    <button onclick="mudaCor(1)">Vermelhor </button>
+    <button onclick="mudaCor(2)">Verde </button>
+    <button onclick="mudaCor(3)">Azul </button>
+    <button onclick="tiraCor()">Remover Cor </button>
+</body>
+</html>

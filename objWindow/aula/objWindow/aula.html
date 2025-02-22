@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Window - P1 (open, close)</title>
+</head>
+<body>
+    <script>
+        var minhaJanela1,minhaJanela2;
+
+        function abreJ(){
+           // var minhaJanela = window.open("aula1B.html", "cfb");
+           // abrir a janela dentro do iframe 
+             minhaJanela1 = window.open("aula1B.html","_blank","width=300,height=300,top=300,left=300");
+             minhaJanela2 = window.open("aula1B.html","_blank","width=300,height=300,top=300,left=300");
+        }
+         function fechaJ(){
+            minhaJanela1.close();
+            minhaJanela2.close();
+            // fechar a janela que abriu 
+         }
+    </script>
+
+<button onclick="abreJ()"> Abre Nova Janela </button>
+<button onclick="fechaJ()">Fechar Janela</button>
+<iframe name="cfb" src=""></iframe>
+</body>
+</html>

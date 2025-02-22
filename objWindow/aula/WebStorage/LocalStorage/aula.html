@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> os dados ficam salvos no navegador mesmo fechando e abrindo </title>
+</head>
+<style></style>
+<script>
+
+        if(typeof(Storage)!= "undefine"){
+
+           // localStorage.setItem("canal","Cfbcursos"); // criar um item que fica gravado No navegador
+            //localStorage.removeItem("canal");
+
+            //var vcanal = localStorage.getItem("canal"); // pegar valor da pagina 
+            //var vcanal = localStorage.canal;
+            //document.write(vcanal);
+
+            if(localStorage.visitas){ // contar o Número de acesssos
+                localStorage.visitas = Number(localStorage.visitas) +1;
+            }else{
+                //localStorage.setItem("visitas",1); da no mesmo que a linha de baixo
+                localStorage.visitas =1;
+            }
+            document.write("visitas" + localStorage.visitas);
+        }else{
+            document.write("Sem Suporte ao web Storage ")
+        }
+   
+</script>
+<body>
+    
+</body>
+</html>

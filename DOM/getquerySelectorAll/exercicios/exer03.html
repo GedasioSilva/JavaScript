@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+   
+<body>
+
+    <h1>Titulo Principal</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum consectetur suscipit eveniet non
+        . Exercitationem minus unde vero tempore, non ullam odio.
+         Saepe obcaecati, a quaerat quo repudiandae porro dolores.</p>
+    
+    <h1>Titulo Principal</h1>
+
+            <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ad aliquam, temporibus, iusto impedit quidem
+                delectus, sequi iste hic necessitatibus unde perspiciatis
+                dolor tempora ut. Voluptatibus voluptas amet facilis dolorum.</p>
+
+    <h2>Titulo</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur optio officiis sequi vel harum tempore 
+        itaque tenetur consequatur velit atque ipsa consectetur 
+        dolore facere, non aliquid. Tenetur nostrum et sint?
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quam vel assumenda explicabo quidem placeat.
+         Necessitatibus ex atque illum distinctio, asperiores similique delectus mollitia ut. Quam, laudantium. Possimus,
+          ratione quos?
+        </p>
+</body>
+<script>
+    var titulo = document.querySelectorAll("h1");
+    for(i=0;i< titulo.length;i++){
+        titulo[i].style.color="red";
+        titulo[1].style.fontSize="40px";
+        titulo[1].style.color="blue";
+    }
+
+    var subtitulo = document.querySelectorAll("h1").addEventListener('click',p());
+
+    function p(){
+        var p = document.querySelectorAll("p");
+        for(i=0;i < p.length;i++){
+            p[i].style.color="red";
+            
+        }
+    }
+
+   
+</script>
+</html>

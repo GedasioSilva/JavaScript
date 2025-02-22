@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SessionStorage quando o Navegador for fechando a sessão é fechada</title>
+
+</head>
+<style>
+</style>
+<script>
+
+    function pagina(pg){
+        sessionStorage.nome=document.getElementById("fnome").value; // pegando o valor do input fnome 
+        window.location.assign("p"+pg+".html");
+    }
+
+    function inicia(){
+        document.getElementById("btnP2").addEventListener("click",function(){ // pegando o elemento de id e criando uma função click
+            pagina(2);
+        });
+        document.getElementById("btnP3").addEventListener("click",function(){ // pegando o elemento de id e criando uma função click
+            pagina(3);
+        });
+        document.getElementById("btnLimpar").addEventListener("click",function(){ // pegando o elemento de id e criando uma função click
+            sessionStorage.clear();
+        });
+    }
+
+    window.addEventListener("load",inicia);
+
+</script>
+
+<body>
+
+    <input  type="text" name="fnome" id="fnome" size="20" maxlength="20" ><br><br>
+    <button id="btnP2">Pagína2</button>
+    <button id="btnP3">Pagína3</button>
+    <button id="btnLimpar">Limpar SessionStorage</button>
+</body>
+</html>

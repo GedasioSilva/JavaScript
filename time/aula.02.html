@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ficar mudando a cor da pagina</title>
+</head>
+<body>
+    <script>
+        var cores=["#F00","#0F0","#00F","#FF0","#0FF","#F0F","#000","#FFF"];
+        var i=0;
+        var timer=setInterval(mudaCorFundo,1000);
+        function mudaCorFundo(){
+        document.body.style.backgroundColor=cores[i];
+        i++;
+        if(i >= cores.length){
+        i=0;
+        }
+        }
+        </script>
+</body>
+</html>

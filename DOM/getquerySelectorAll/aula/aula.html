@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>querySelector e querySelectorAll</title>
+    </head>
+    <body>
+            <div id="c1" class="c1 curso" >Html</div>
+            <div id="c2" class="c1 curso ">Css</div>
+            <div id="c3" class="c1 curso">Javascript</div>
+            <div id="c4" class="c1 curso">PHP</div>
+            <div id="c5" class="c1 curso">React</div>
+            <div id="c6" class="c2 curso">Mysql</div>
+            <div id="c7" class="c2 curso">C++</div>
+            <div id="c8" class="c2 curso">C#</div>
+            <div id="c9" class="c2 curso">Arduino</div>
+    </body>
+
+    <style>
+        .curso{
+            display: flex;
+            justify-content: center;
+            width: 200px;
+            border: 4px solid #888;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px 0px;
+            cursor: pointer;
+        }
+        .curso:hover{
+            border-color: red ;
+        }
+        .c1{
+            background-color: #ccc;
+            color: #444;
+        }
+        .c2{
+            background-color: #444;
+            color: #ccc;
+        }
+        .destaque{
+            background-color: #800 !important;
+            color: #fcc !important;
+            border-color: #f00 !important;
+        }
+    </style>
+
+<script src="aula.js"></script>
+</html>

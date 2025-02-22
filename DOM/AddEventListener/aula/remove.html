@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> removeEventListener()  </title>
+</head>
+<body>
+    <script>
+        function load(){
+        document.addEventListener("keydown",tecla);
+        }
+        function tecla(){
+        var vtecla = event.keyCode;
+        if(vtecla==32){
+        alert("Tecla <<ENTER>> pressionada. \n\n O evento será removido. \n\n");
+        document.removeEventListener("keydown",tecla);
+        }else{
+        alert("Tecla pressionada: "+vtecla);
+        }
+        }
+        window.addEventListener("load", load);
+        </script>
+</body>
+</html>

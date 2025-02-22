@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> querySelectorAll</title>
+</head>
+<body>
+    
+    <h1 class="titulo"> Estudando JavaScript</h1>
+    <h1 class="titulo"> Estudando Html </h1>
+
+    <div class="quadro">
+        <h3>JavaScript aula 26 </h3>
+        <p>Este texto esta dentro de uma div</p>
+        <p> Este também </p>
+    </div>
+
+    <script>
+
+var elementos = document.querySelectorAll(".titulo");
+elementos[0].style.color = "blue";
+elementos[1].style.fontSize = "30px";
+
+var qdtd = document.querySelectorAll('.quadro');
+qdtd[0].style.color = "Red";
+
+
+    </script>
+</body>
+</html>

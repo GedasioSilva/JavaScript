@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mudar a cor da pagina com botões</title>
+</head>
+<body>
+    <script>
+        var cores=["#F00","#0F0","#00F","#FF0","#0FF","#F0F","#000","#FFF"];
+var i=0;
+var timer;
+function mudaCorFundo(){
+document.body.style.backgroundColor=cores[i];
+i++;
+if(i >= cores.length){
+i=0;
+}
+}
+function iniciar(){
+clearInterval(timer);
+timer=setInterval(mudaCorFundo,1000);
+}
+function parar(){
+clearInterval(timer);
+document.getElementById("bt_ini").value="Continuar troca";
+}
+
+</script>
+<input type="button" value="Iniciar troca" id="bt_ini" onclick="iniciar()"><br><br>
+<input type="button" value="Parar troca" onclick="parar()">
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replaceChild, substituir elementos HTML pelo Javascript</title>
+</head>
+<body>
+    <script>
+        function inica(){
+            // subistituir o elemento P por um elemento H1 
+            var novoH1 = document.createElement("h1");
+            var listaCursos = document.getElementById("cfbCursos");
+            var antigoP = listaCursos.childNodes[9];
+            var txtH = document.createTextNode(antigoP.innerHTML);
+            novoH1.appendChild(txtH);
+            listaCursos.replaceChild(novoH1,antigoP);
+
+        }
+        window.addEventListener("load",inica); // pra chamar logo a função iniciar
+    </script>
+
+        <div id="cfbCursos">
+            <p>Curso de Javascript </p>
+            <p>Curso de HTML/HTML5 </p>
+            <p>Curso de Css3 </p>
+            <p>Curso de PHP/MYSQL </p>
+            <p>Curso de C++ </p>
+            <p>Curso de Photoshop </p>
+            <p>Curso de Flash </p>
+            <p>Curso Unity</p>
+        </div>
+
+
+</body>
+</html>

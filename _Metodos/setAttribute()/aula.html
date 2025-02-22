@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute()</title>
+</head>
+    <style>
+       .txth1{
+            color:#F00;
+            font-size:45pt;
+        }
+        .edite{
+            font-size: 17px;
+            color: blue;
+            text-align: center;
+        }
+        .muda{
+            background-color: yellow;
+            font-size: 22px;
+        }
+        
+
+    </style>
+    <script>
+       
+       function classe(){
+            document.getElementById("cfb").setAttribute("class","txth1");
+            document.getElementById("cfb").setAttribute("style","background-color:#000;");
+            document.getElementById("cfb").removeAttribute("style");
+            /* removendo o atributo agora tem que ser formatado em Linha*/
+        }
+        function mudaP(){
+            document.getElementById("edite").setAttribute("class","edite");
+            document.getElementById("edite").removeAttribute("class");
+            /* removendo o atributo da Class*/
+        }
+
+        function mudap2(){
+            document.getElementById("muda").setAttribute("class","muda");
+            if(document.getElementById("muda").hasAttribute("class")){
+                    alert("a A tag possui o atributo STYLE");
+            }else{
+                    alert("STYLE não encontrado");
+            }
+        }
+       
+
+</script>
+    </script>
+<body onload="classe() , mudaP() ,mudap2()">
+    <h1 id="cfb">Olá Mundo</h1>
+    <p id="edite">  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Provident incidunt accusamus officiis maiores expedita nobis
+        aliquid. Totam autem animi, quidem, ullam exercitationem,
+        pariatur saepe repellat veniam ipsam odio numquam obcaecati.
+    </p>
+    <p id="muda"> Ola mundo</p>
+    
+</body>
+</html>

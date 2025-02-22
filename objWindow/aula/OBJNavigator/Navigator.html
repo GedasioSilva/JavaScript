@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetor Navigator </title>
+</head>
+<style>
+    #painel{
+        width: 350px;
+        height: 650px;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+    }
+</style>
+<script>
+    var painel; // variavel global
+
+    function localizar (pos){
+        var c = pos.coords;
+        painel.innerHTML += "Loc:Lat:" + c.latitude + " Lon" + c.longitude + "<hr>";
+    }
+
+    function verifica(){ // função pra pegar o id painel da Div 
+        painel = document.getElementById("painel");
+        painel.innerHTML += "Nome do Browser: " + navigator.appName + "<hr>"; // appName "Nome do navegador";
+        painel.innerHTML += "  Nome do Browser: " + navigator.appVersion + "<hr>"; // versão do Navegador
+        painel.innerHTML += "  verificar se tem cookes " + navigator.cookieEnabled+ "<hr>"; // pra saber se tem cookes
+        painel.innerHTML += "Idioma " + navigator.language + "<hr>"; // Pegar o idioma";
+        navigator.geolocation.getCurrentPosition(localizar)+ "<hr>"; // pegar a longitude e latitude
+        painel.innerHTML += "Online " + navigator.onLine+ "<hr>"; // se o navegador esta online 
+        painel.innerHTML += "S.O." + navigator.platform+"<hr>"; // qual é o sistema operacional
+        painel.innerHTML += "Engine " + navigator.product+"<hr>"; // endigine
+        painel.innerHTML += "Agente: " + navigator.userAgent+"<hr>"; // 
+    }   
+
+    window.addEventListener("load",verifica);
+</script>
+<body>
+    <div id="painel"></div>
+</body>
+</html>

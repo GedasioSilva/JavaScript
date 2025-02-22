@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Manipulando atributos html por javascript</title>
+</head>
+<body>
+    <script>
+        function TrocaCarro(c){
+           var obj = document.getElementById("carro");
+           if(c == 1){
+               obj.setAttribute("Class","c1");
+           }if(c == 2){
+               obj.setAttribute("Class","c2");
+           }else if(c==3){            
+               obj.setAttribute("Class","c3");
+           
+           }
+        };
+
+        function removerCarro(){
+            var obj = document.getElementById("carro");
+            obj.removeAttribute("Class");
+        }
+        function verifica(){
+            var obj = document.getElementById("carro");
+            if(obj.hasAttribute("Class")){
+                alert("Atributo Class Está na tag" );
+            }else{
+                alert("Sem Atributo Class");
+            }
+        }
+    </script>
+    <style>
+        #carro{
+            width: 200px;
+            height: 379px;
+            
+        }
+        .c1{
+            background-color: aqua;
+            border: solid 1px black;
+        }
+        .c2{
+            background-color: blue;
+        }
+        .c3{
+            background-color:brown;
+        }
+    </style>
+
+
+
+<button onclick="TrocaCarro(1)">Carro 1</button>
+<button onclick="TrocaCarro(2)">Carro 2</button>
+<button onclick="TrocaCarro(3)">Carro 3</button>
+<button onclick="removerCarro()">Remover Carro</button>
+<button onclick="verifica()">Verificar</button>
+<div id="carro"></div>
+
+</body>
+</html>

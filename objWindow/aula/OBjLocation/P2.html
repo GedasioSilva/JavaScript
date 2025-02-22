@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Location - P1</title>
+</head>
+
+<style>
+    body{
+        background-color: #f00;
+        color: #fff;
+    }
+    a{
+        color: #fff;
+    }
+</style>
+
+<script>
+    var aux = location.hash;   
+    var dados = aux.split("#"); // pegar os valores passados pela Url Que estão na variavel aux 
+    var v1 = dados[1];
+    var v2 = dados[2];
+    document.write(v1); // pegando o primeiro parametro
+    document.write( "<hr>");
+    var h = location.hostname; // pega o nome do host
+   // var href = location.href = "http://youtube.com/cfbCursos"; // emcaminha direto pra a propriedade
+    document.write( href);
+    document.write( "<hr>");
+    var o = location.origin;  // vai mostrar o protocolo horste name 
+    document.write(o);
+    document.write( "<hr>");
+    var p = location.pathname;  //Caminho do Http
+    document.write(p);
+    document.write( "<hr>");
+    var pro = location.protocol;  // protocolo URL
+    document.write(pro);
+    document.write( "<hr>");
+
+</script>
+
+<body>
+    <h1>Pagina 2 P2.html</h1>
+
+
+
+    <a href="aula.html">Voltar</a>
+</body>
+</html>l

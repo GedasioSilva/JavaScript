@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando Funções</title>
+</head>
+    <style>
+        #dv1{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <script>
+
+        function dive(){
+           obj = document.getElementById('dv1').addEventListener("click",Muda);
+        }
+        function Muda(){
+            var obj =document.style.backgroundColor = "red";
+        }
+
+    </script>
+<body>
+    <div id="dv1"></div>
+</body>
+</html>

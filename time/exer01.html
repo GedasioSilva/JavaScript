@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex setTimeout e setInterval</title>
+</head>
+<body>
+    <script>
+
+      function chamar(){
+        var cont = setInterval(senharErrada,5000);
+        
+      }
+
+      
+      function parar(){
+        document.removeEventListener("load",vali); 
+        clearInterval(chamar);
+       
+      }
+
+      function senharErrada(){
+        alert("senhar Errada Porra");
+      }
+      
+      function vali(){
+        var senhar = prompt("Senhar");
+        if(senhar === 123){
+           chamar();
+        }else{
+            alert("senhar correta manolo");
+            parar();
+        }
+      }
+      
+      window.addEventListener("load",vali);
+    </script>
+
+
+
+</body>
+</html>

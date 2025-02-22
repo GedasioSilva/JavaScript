@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Interval</title>
+</head>
+<body>
+    <script>
+        var cont=0;
+        var timer=setInterval(cfb,1000);
+        function cfb(){
+        document.write("Canal Fessor Bruno<br>");
+        cont++;
+        if(cont == 10){
+        clearInterval(timer);
+        }
+        }
+        </script>
+        
+</body>
+</html>

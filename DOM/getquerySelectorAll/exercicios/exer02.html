@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+</head>
+<body>
+    <h1 class=".titulo">Estudando JavaScript</h1>
+    <p>Primeiro Texto</p>
+    <h2>Colocando Eventos</h2>
+    <p>Segundo texto</p>
+    <p>Terceiro Texto</p>
+
+    
+
+</body>
+<script>
+   var x = document.querySelectorAll("p"); /* pegando o elemento P*/
+   for(i=0; i < x.length;i++){ 
+    x[i].innerHTML = "Novo texto"; /*Alterando o conteudo da varial x que pegar o conteudo P*/
+    x[i].style.color = "Red"; /* Alterando a Cor do elemento P*/
+   }
+   
+   var txt = document.querySelectorAll(".titulo");
+    txt[1].innerHTML="Canal Fessor Bruno";
+    txt[0].style.color = "blue";
+    txt[1].style.fontSize = "30px";
+</script>
+
+
+
+
+

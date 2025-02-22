@@ -1,0 +1,1 @@
+import {converteCentimetroParaMetro, converteMetroParaCentimetro, converteMetroParaQuilometro} from './conversor.js';

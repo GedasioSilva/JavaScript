@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudando cor de fundo da pagina </title>
+</head>
+<script>
+    function corPag(cor){
+        obj = document.getElementById("corpo");
+        if(cor == 1){
+            obj.style.backgroundColor = "blue";
+        }if(cor == 2){
+            obj.style.backgroundColor = "red";
+        }else if (cor == 3){
+            obj.style.backgroundColor = "black";
+        }
+    }
+
+    function removerCor(r){
+        obj.style.backgroundColor = "white";
+    }
+
+</script>
+<body id="corpo">
+
+    <button onclick="corPag(1)">Azul</button>
+    <button onclick="corPag(2)">Vermelhor</button>
+    <button onclick="corPag(3)">Preto</button>
+    <button onclick="removerCor()">Remover Cor </button>
+
+</body>
+</html>

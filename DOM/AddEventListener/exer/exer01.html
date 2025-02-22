@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercitando addEventListener </title>
+</head>
+<body>
+    <script>
+        function validar(){
+            if(cod === 0800){
+                alert("Seja bem vindo Gedasio");
+            }else{
+                alert("Cadastresse")
+            }
+        }
+
+        function bemvindo(){
+           cod=prompt("Informe seu codigo");
+           validar();
+        }
+
+        window.addEventListener("load",bemvindo);
+
+        function Cadastro(){
+            alert("Vamos cadastrar")
+        }
+
+    </script>
+
+    <input type="button" value="Cadastro" onclick="Cadastro()">
+</body>
+</html>

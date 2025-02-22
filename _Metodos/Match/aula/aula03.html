@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos para manipulação de string P3</title>
+</head>
+<body>
+    <p id="txt">Cfb Cursos</p>
+</body>
+    <script>
+        var texto1 = document.getElementById("txt").innerHTML;
+      //  var res = texto1.indexOf("u"); // lasindexOf pega o ultimo caracter com essa letra
+      //  var texto2 = texto1;
+     // var res = texto1.split(" "); Oque vai corta da estring
+       // var res = texto1.slice(0,3); onde vai corta da String do 0 ate o 3
+       // var res = texto1.localeCompare(texto2); vai comparar as duas Strings
+       var res =texto1.substr(4,6)
+      document.write(res);
+    </script>
+</html>
